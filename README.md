@@ -1,211 +1,152 @@
-\# CareerConnect â€“ Job Portal \& Smart Resume Management System
+# CareerConnect – Job Portal & Smart Resume Management System
 
-
-
-\## About the Project
-
-
+## About the Project
 
 CareerConnect is a web-based job portal designed to connect job seekers with companies. It provides a platform for job seekers to explore job opportunities, manage applications, and maintain their resumes. Companies can register, manage their profiles, and post job vacancies after administrator verification.
 
+## Technologies Used
 
+### Frontend
+- React.js
+- Vite
+- JavaScript
+- HTML
+- CSS
 
-\## Technologies Used
+### Backend
+- Python
+- Django
+- Django REST Framework
+- JWT Authentication
 
+### Database
+- MySQL
 
-
-\### Frontend
-
-\- React.js
-
-\- Vite
-
-\- JavaScript
-
-\- HTML and CSS
-
-
-
-\### Backend
-
-\- Python
-
-\- Django
-
-\- Django REST Framework
-
-\- JWT Authentication
-
-
-
-\### Database
-
-\- MySQL
-
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
 CareerConnect/
-
-â”œâ”€â”€ backend/
-
-â”‚   â”œâ”€â”€ accounts/
-
-â”‚   â”œâ”€â”€ config/
-
-â”‚   â”œâ”€â”€ jobs/
-
-â”‚   â”œâ”€â”€ manage.py
-
-â”‚   â”œâ”€â”€ requirements.txt
-
-â”‚   â””â”€â”€ .env.example
-
-â”‚
-
-â”œâ”€â”€ frontend/
-
-â”‚   â”œâ”€â”€ public/
-
-â”‚   â”œâ”€â”€ src/
-
-â”‚   â”œâ”€â”€ package.json
-
-â”‚   â””â”€â”€ vite.config.js
-
-â”‚
-
-â”œâ”€â”€ .gitignore
-
-â””â”€â”€ README.md
-
+├── backend/
+│   ├── accounts/
+│   ├── config/
+│   ├── jobs/
+│   ├── manage.py
+│   ├── requirements.txt
+│   └── .env.example
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── .gitignore
+└── README.md
 ```
 
+## Setup Instructions
 
-
-\## Setup Instructions
-
-
-
-\### 1. Clone the Repository
-
-
+### 1. Clone the Repository
 
 ```bash
-
-git clone YOUR\_GITHUB\_REPOSITORY\_URL
-
+git clone https://github.com/Sjsharin/CareerConnect.git
 cd CareerConnect
-
 ```
 
+### 2. Backend Setup
 
-
-\### 2. Backend Setup
-
-
+Navigate to the backend folder:
 
 ```bash
-
 cd backend
-
-python -m venv venv
-
 ```
 
+Create a Python virtual environment:
 
+```bash
+python -m venv venv
+```
 
 Activate the virtual environment on Windows:
 
-
-
 ```bash
-
-venv\\Scripts\\activate
-
+venv\Scripts\activate
 ```
 
-
-
-Install dependencies:
-
-
+Install the required packages:
 
 ```bash
-
 pip install -r requirements.txt
-
 ```
 
+### 3. Environment Configuration
 
+Create a `.env` file inside the `backend` folder using `.env.example` as a reference.
 
-Create your `.env` file using `.env.example` as a reference and configure your local MySQL database credentials.
+Configure your own local values:
 
+- Django secret key
+- Debug setting
+- MySQL database name
+- MySQL username
+- MySQL password
+- Database host
+- Database port
 
+Never upload your actual `.env` file to GitHub.
 
-Run migrations:
+### 4. Database Setup
 
+Make sure MySQL is installed and running.
 
+Create the database named `job_portal_db` in MySQL, and configure the database credentials in your `.env` file.
+
+Run database migrations:
 
 ```bash
-
 python manage.py migrate
-
 ```
 
-
-
-Start the backend:
-
-
+Start the Django development server:
 
 ```bash
-
 python manage.py runserver
-
 ```
 
+The backend will run at:
 
+```text
+http://127.0.0.1:8000/
+```
 
-\### 3. Frontend Setup
+### 5. Frontend Setup
 
-
-
-Open another terminal:
-
-
+Open another terminal and navigate to the frontend folder:
 
 ```bash
-
 cd frontend
-
-npm install
-
-npm run dev
-
 ```
 
+Install frontend dependencies:
 
+```bash
+npm install
+```
 
-\## Security
+Start the React development server:
 
+```bash
+npm run dev
+```
 
+## Security
 
-\- Never upload `.env` files.
+- Never upload `.env` files.
+- Never expose database passwords or Django secret keys.
+- Keep authentication tokens secure.
+- Configure your own environment variables before running the application.
 
-\- Never expose database passwords or Django secret keys.
-
-\- Configure your own local environment variables before running the application.
-
-
-
-\## Project Status
-
-
+## Project Status
 
 Under development.
+
