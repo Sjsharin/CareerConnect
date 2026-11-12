@@ -149,4 +149,8 @@ npm run dev
 ## Project Status
 
 Under development.
+## Application Screenshots
 
+### Login Page
+
+![CareerConnect Login Page](screenshot/login.png)
