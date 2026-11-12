@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from 'react';
+import { API_BASE_URL } from './config';
 
 function AdminDashboard() {
   const [dashboard, setDashboard] = useState(null);
@@ -19,7 +20,7 @@ function AdminDashboard() {
 
       try {
         const response = await fetch(
-          'http://127.0.0.1:8000/api/accounts/admin/dashboard/',
+          `${API_BASE_URL}/api/accounts/admin/dashboard/`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -50,7 +51,7 @@ function AdminDashboard() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/accounts/admin/companies/${companyId}/verification/`,
+        `${API_BASE_URL}/api/accounts/admin/companies/${companyId}/verification/`,
         {
           method: 'PATCH',
           headers: {
@@ -126,7 +127,6 @@ function AdminDashboard() {
         fontFamily: 'Arial, sans-serif',
       }}
     >
-
       {/* Dashboard Header */}
       <div
         style={{
@@ -221,7 +221,6 @@ function AdminDashboard() {
             textAlign: 'left',
           }}
         >
-
           {/* Table Header */}
           <thead>
             <tr style={{ background: '#f2f2f2' }}>

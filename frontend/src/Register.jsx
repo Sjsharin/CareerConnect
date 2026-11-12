@@ -1,5 +1,7 @@
+
 import { useState } from 'react'
 import './Register.css'
+import { API_BASE_URL } from './config'
 
 function Register() {
   const [role, setRole] = useState('job_seeker')
@@ -31,7 +33,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        'http://127.0.0.1:8000/api/accounts/register/',
+        `${API_BASE_URL}/api/accounts/register/`,
         {
           method: 'POST',
           headers: {

@@ -6,8 +6,9 @@ import JobSeekerDashboard from './JobSeekerDashboard'
 import MyApplications from './MyApplications'
 import CompanyDashboard from './CompanyDashboard'
 import AdminDashboard from './AdminDashboard'
+import { API_BASE_URL } from './config'
 
-const API_URL = 'http://127.0.0.1:8000/api/jobs/'
+const API_URL = `${API_BASE_URL}/api/jobs/`
 
 const emptyJobForm = {
   title: '',
@@ -248,7 +249,7 @@ try {
 
   try {
     const response = await fetch(
-      `http://127.0.0.1:8000/api/jobs/${jobId}/apply/`,
+     `${API_BASE_URL}/api/jobs/${jobId}/apply/`,
       {
         method: 'POST',
         headers: {

@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from 'react';
+import { API_BASE_URL } from './config';
 
 function CompanyDashboard() {
   const [jobs, setJobs] = useState([]);
@@ -20,7 +21,7 @@ function CompanyDashboard() {
 
       try {
         const response = await fetch(
-          'http://127.0.0.1:8000/api/company/jobs/',
+          `${API_BASE_URL}/api/company/jobs/`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -74,7 +75,7 @@ function CompanyDashboard() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/company/jobs/${jobId}/applicants/`,
+        `${API_BASE_URL}/api/company/jobs/${jobId}/applicants/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -125,7 +126,7 @@ function CompanyDashboard() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/company/jobs/${jobId}/applicants/${applicationId}/status/`,
+        `${API_BASE_URL}/api/company/jobs/${jobId}/applicants/${applicationId}/status/`,
         {
           method: 'PATCH',
           headers: {

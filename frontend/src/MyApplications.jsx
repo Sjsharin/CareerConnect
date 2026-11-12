@@ -1,9 +1,10 @@
 
 import { useEffect, useState } from 'react'
 import './MyApplications.css'
+import { API_BASE_URL } from './config'
 
 const APPLICATIONS_API =
-  'http://127.0.0.1:8000/api/my-applications/'
+  `${API_BASE_URL}/api/my-applications/`
 
 function MyApplications() {
   const [applications, setApplications] = useState([])
@@ -80,9 +81,7 @@ function MyApplications() {
 
   return (
     <div className="applications-container">
-
       <header className="applications-header">
-
         <button
           onClick={() => {
             window.location.href = '/'
@@ -105,7 +104,6 @@ function MyApplications() {
         <p>
           Track the status of the jobs you have applied for.
         </p>
-
       </header>
 
       {message && (
@@ -127,13 +125,11 @@ function MyApplications() {
 
       {!message && applications.length > 0 && (
         <div className="applications-list">
-
           {applications.map((application) => (
             <div
               className="application-card"
               key={application.id}
             >
-
               <h2>
                 {application.job_title}
               </h2>
@@ -157,13 +153,10 @@ function MyApplications() {
                   {formatStatus(application.status)}
                 </span>
               </p>
-
             </div>
           ))}
-
         </div>
       )}
-
     </div>
   )
 }

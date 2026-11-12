@@ -1,9 +1,10 @@
 
 import { useEffect, useState } from 'react'
 import './JobSeekerDashboard.css'
+import { API_BASE_URL } from './config'
 
 const PROFILE_API =
-  'http://127.0.0.1:8000/api/accounts/job-seeker/profile/'
+  `${API_BASE_URL}/api/accounts/job-seeker/profile/`
 
 function JobSeekerDashboard() {
   const [profile, setProfile] = useState({
@@ -127,7 +128,7 @@ function JobSeekerDashboard() {
   const resumeUrl = existingResume
     ? existingResume.startsWith('http')
       ? existingResume
-      : `http://127.0.0.1:8000${existingResume}`
+      : `${API_BASE_URL}${existingResume}`
     : ''
 
   const resumeName = existingResume
