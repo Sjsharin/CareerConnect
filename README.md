@@ -157,3 +157,6 @@ Under development.
 ### Job Seeker Dashboard
 
 ![CareerConnect Job Seeker Dashboard](screenshot/job-seeker-dashboard.png)
+### Company Dashboard
+
+![CareerConnect Company Dashboard](screenshot/company-dashboard.png)
