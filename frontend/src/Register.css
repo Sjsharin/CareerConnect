@@ -1,0 +1,124 @@
+.register-page {
+  min-height: 100vh;
+  padding: 48px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f7f5ff, #eeebff);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e7e5f2;
+  border-radius: 20px;
+  box-shadow: 0 16px 45px rgba(35, 24, 75, 0.1);
+}
+
+.register-card h1 {
+  margin: 0;
+  color: #211747;
+  font-size: 28px;
+  text-align: center;
+}
+
+.register-subtitle {
+  margin: 0 0 12px;
+  color: #77718c;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.register-card label {
+  color: #30284c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.register-card input,
+.register-card select {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  color: #28243a;
+  font: inherit;
+  font-size: 14px;
+  background: #ffffff;
+  border: 1px solid #dedbea;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.register-card input:focus,
+.register-card select:focus {
+  border-color: #7256d8;
+  box-shadow: 0 0 0 3px rgba(114, 86, 216, 0.12);
+}
+
+.register-card button {
+  min-height: 48px;
+  margin-top: 10px;
+  padding: 12px 18px;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  background: #7256d8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.register-card button:hover {
+  background: #5d43bd;
+  transform: translateY(-1px);
+}
+
+.register-card button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.register-success,
+.register-error {
+  margin: 8px 0 0;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  border-radius: 8px;
+}
+
+.register-success {
+  color: #17683b;
+  background: #eaf8ef;
+}
+
+.register-error {
+  color: #a12626;
+  background: #fff0f0;
+}
+
+@media (max-width: 520px) {
+  .register-page {
+    padding: 24px 14px;
+    align-items: flex-start;
+  }
+
+  .register-card {
+    padding: 24px 18px;
+    border-radius: 14px;
+  }
+
+  .register-card h1 {
+    font-size: 24px;
+  }
+}
