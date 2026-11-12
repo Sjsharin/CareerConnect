@@ -154,3 +154,6 @@ Under development.
 ### Login Page
 
 ![CareerConnect Login Page](screenshot/login.png)
+### Job Seeker Dashboard
+
+![CareerConnect Job Seeker Dashboard](screenshot/job-seeker-dashboard.png)
