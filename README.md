@@ -160,3 +160,12 @@ Under development.
 ### Company Dashboard
 
 ![CareerConnect Company Dashboard](screenshot/company-dashboard.png)
+## Admin Dashboard
+
+### CareerConnect Admin Dashboard
+
+![CareerConnect Admin Dashboard](screenshot/admin-dashboard.png)
+
+### Django Administration Panel
+
+![Django Admin Panel](screenshot/django-admin-panel.png)
